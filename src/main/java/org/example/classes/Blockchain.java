@@ -13,13 +13,13 @@ public class Blockchain {
             currentBlock = blockchain.get(i);
             previousBlock = blockchain.get(i - 1);
 
-            // Compare registered hash and generated hash
+            
             if (!currentBlock.hash.equals(currentBlock.generateHash())) {
                 System.out.println("Current Hashes not equal");
                 return false;
             }
 
-            // Compare previous hash and registered previous hash
+            
             if (!previousBlock.hash.equals(currentBlock.previousHash)) {
                 System.out.println("Previous Hashes not equal");
                 return false;
